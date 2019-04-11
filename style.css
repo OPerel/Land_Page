@@ -13,8 +13,11 @@ body {
 }
 
 header {
-    height: 100vh; 
-    padding: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* padding: 130px; */
     background: url(images/Land_1590x1060.jpg) 50%;
     background-size: cover;
 }
