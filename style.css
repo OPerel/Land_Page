@@ -17,10 +17,7 @@ header {
     height: 100%; */
     padding: 130px;
     background: url(images/Land_1590x1060.jpg) 50%;
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
+    background-size: cover;
 }
 
 h1 {
@@ -66,7 +63,7 @@ button, input {
 
 .services {
     padding: 70px 0;
-    background-color: #A89165;
+    background-color: #B1A587; /* A89165 */
 }
 
 .services h2 {
@@ -86,7 +83,7 @@ button, input {
 
 .service:hover {
     color: #1E0005;
-    background-color: #A89170;
+    background-color: #AE9581; /* #A89170; */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -98,7 +95,7 @@ button, input {
 
 .quote {
     padding: 50px 0;
-    background-color: #1A0C00;
+    background-color: #000E0E; /* #1A0C00; */
 }
 
 .quote p {
@@ -124,15 +121,9 @@ button, input {
     margin-right: 5%;
 }
 
-/* .quote p .fas {
-    display: inline-block;
-    margin: 0 20px;
-    font-size: 2rem;
-} */
-
 .subscribe {
     padding: 50px 0;
-    background-color: #958263;
+    background-color: #B1A587; /* #958263; */
     text-align: center;
 }
 
@@ -150,7 +141,7 @@ button, input {
     padding: 6px;
     border: none;
     border-radius: 5px;
-    background-color: #B29D90;
+    background-color: #C3BBAC; /* #B29D90; */
 }
 
 .name{
@@ -164,10 +155,8 @@ button, input {
 }
 
 .name:focus, .email:focus {
-    /* border: solid 2px #B29D90; */
     border: none;
     outline: none;
-    background-color: #C3BBAC;
 }
 
 .name:active, .email:active {
@@ -181,7 +170,7 @@ button, input {
     border-radius: 5px;
     font-size: 1.3rem;
     color: #4E2B15;
-    background-color: #B29D90;
+    background-color: #C3BBAC; /* #B29D90; */
     transition: 0.3s;
 }
 
@@ -198,7 +187,7 @@ button, input {
 
 footer {
     padding: 0px 0 40px 0;
-    background-color: #958263;
+    background-color: #B1A587; /* #958263; */
     text-align: center;
 }
 
@@ -227,7 +216,7 @@ footer ul li a:hover {
     color: #1A0C00;
     opacity: 1;
     text-decoration: none;
-    background-color: #88795F;
+    background-color: #88795F; /* #88795F */
     cursor: pointer;
 }
 
