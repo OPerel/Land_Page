@@ -17,7 +17,6 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* padding: 130px; */
     background: url(images/Land_1590x1060.jpg) 50%;
     background-size: cover;
 }
@@ -26,14 +25,14 @@ h1 {
     width: 100%;
     text-align: center;
     font-size: 5rem;
-    color: #A37F62;
+    color: #ECDFC4; /* #A37F62; */
 }
 
 header p {
     width: 100%;
     text-align: center;
     font-size: 3rem;
-    color: #A37F62;
+    color: #ECDFC4;
 }
 
 button, input {
@@ -44,18 +43,18 @@ button, input {
     display: block;
     margin: 70px auto;
     padding: 5px 40px;
-    border: solid 1px #A37F62;
+    border: solid 1px #ECDFC4;
     border-radius: 5px;
     font-size: 1.3rem;
-    color: #A37F62;
+    color: #ECDFC4;
     background-color: transparent;
     transition: 0.3s;
 }
 
 .btn-p:hover {
-    color: #2B1503;
-    background-color: #A37F62;
-    border: solid 1px #A37F62;
+    color: #000000; /* #E18C8C; */
+    background-color: #ECDFC4;
+    border: solid 1px #ECDFC4;
     cursor: pointer;
 }
 
@@ -65,7 +64,7 @@ button, input {
 
 .services {
     padding: 70px 0;
-    background-color: #B1A587; /* A89165 */
+    background-color: #CECECE; /* #B1A587; */
 }
 
 .services h2 {
@@ -85,7 +84,7 @@ button, input {
 
 .service:hover {
     color: #1E0005;
-    background-color: #AE9581; /* #A89170; */
+    background-color: #ECDFC4;  /* #988257; */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -123,6 +122,7 @@ button, input {
     margin-right: 5%;
 }
 
+/* Products Section */
 .products {
     padding: 70px 0;
     background-color: #83A4A0;
@@ -200,7 +200,11 @@ button, input {
     background-position: center;
 }
 
-
+/* Dark Section */
+.dark-bg {
+    padding: 100px;
+    background-color: #320606;
+}
 
 /* Subscribe Form */
 .subscribe {
