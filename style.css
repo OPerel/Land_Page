@@ -202,8 +202,21 @@ button, input {
 
 /* Dark Section */
 .dark-bg {
-    padding: 100px;
+    padding: 80px 20px;
     background-color: #320606;
+}
+
+.dark-bg div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.dark-bg .fab {
+    margin: 10px;
+    font-size: 80px;
+    color: #dadada; /* #ECDFC4; */
 }
 
 /* Subscribe Form */
