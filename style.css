@@ -236,6 +236,24 @@ button, input {
     width: 30%;
 }
 
+@media only screen and (max-width: 992px) {
+    .name {
+        display: block;
+        width: 45%;
+        margin: 5px auto;
+    }
+
+    .email {
+        width: 45%;
+    }
+
+    input.btn-s {
+        display: block;
+        width: 45%;
+        margin: 5px auto;
+    }
+}
+
 .name:focus, .email:focus {
     border: none;
     outline: none;
