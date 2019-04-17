@@ -17,7 +17,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(images/Land_1590x1060.jpg) 50%;
+    background: url(../images/Land_1590x1060.jpg) 50%;
     background-size: cover;
 }
 
@@ -108,8 +108,8 @@ button, input {
     font-family: 'Indie Flower', cursive;
     font-size: 1.7rem;
     text-align: center;
-    background: url(images/ql.png),
-                url(images/qr.png);
+    background: url(../images/ql.png),
+                url(../images/qr.png);
     background-size: 50px 50px;
     background-position: top 0 left 0,
                          bottom 0 right 0;
@@ -192,28 +192,39 @@ button, input {
 }
 
 #pro2 {
-    background-image: url(images/pro2.jpg);
+    background-image: url(../images/pro2.jpg);
 }
 
 #pro1 {
-    background-image: url(images/pro1.jpg);
+    background-image: url(../images/pro1.jpg);
     background-position: center;
 }
 
-/* Dark Section */
-.dark-bg {
+/* Logos Section */
+.logos {
     padding: 80px 20px;
     background-color: #320606;
+    overflow: hidden;
 }
 
-.dark-bg div {
+$animationSpeed: 40s;
+
+/* Animation */
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+.logos .slide-track {
+    animation: scroll $animationSpeed linear infinite;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     justify-items: center;
+    /* width: calc(250px * 14); */
 }
 
-.dark-bg .fab {
+.logos .slide-track .fab {
     margin: 10px;
     font-size: 80px;
     color: #dadada; /* #ECDFC4; */
