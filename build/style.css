@@ -69,6 +69,7 @@ button, input {
   outline: none;
 }
 
+/* Services Section */
 .services {
   padding: 70px 0;
   background-color: #CECECE;
@@ -101,6 +102,7 @@ button, input {
   font-size: 50px;
 }
 
+/* Quote Section */
 .quote {
   padding: 50px 0;
   background-color: #000E0E;
@@ -195,6 +197,7 @@ button, input {
     margin-bottom: 30px;
   }
 }
+
 #pro2 {
   background-image: url(../images/pro2.jpg);
 }
@@ -285,6 +288,7 @@ button, input {
     margin: 5px auto;
   }
 }
+
 .name:focus, .email:focus {
   border: none;
   outline: none;
@@ -316,6 +320,7 @@ button, input {
   outline: none;
 }
 
+/* Footer */
 footer {
   padding: 0px 0 40px 0;
   background-color: #B1A587;
