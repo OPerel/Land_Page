@@ -19,6 +19,45 @@ body {
   padding: 0;
 }
 
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    list-style: none;
+}
+
+nav ul li #logo {
+    font-size: 80px;
+    color: #ECDFC4;
+}
+
+nav ul li {
+    margin: 5px 20px;
+}
+
+nav ul li:first-of-type {
+    margin-right: auto;
+}
+
+nav ul li a {
+    font-size: 1.3rem;
+    color: #ECDFC4;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ECDFC4;
+    cursor: pointer;
+}
+
+/* Header */
 header {
   display: flex;
   justify-content: center;

@@ -1,19 +1,19 @@
 {
-  "name": "land_page",
-  "version": "1.0.0",
-  "description": "Example landing page",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo 'no test'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OPerel/Land_Page.git"
-  },
-  "author": "OPerel",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OPerel/Land_Page/issues"
-  },
-  "homepage": "https://operel.github.io/Land_Page/"
+    "name": "land_page",
+    "version": "1.0.0",
+    "description": "Example landing page",
+    "main": "script.js",
+    "scripts": {
+        "test": "live-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/OPerel/Land_Page.git"
+    },
+    "author": "OPerel",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/OPerel/Land_Page/issues"
+    },
+    "homepage": "https://operel.github.io/Land_Page/"
 }
