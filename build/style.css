@@ -20,41 +20,42 @@ body {
 }
 
 /* Navigation */
-nav {
+#nav {
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-nav ul {
+#nav ul {
     display: flex;
     align-items: center;
     padding: 0 40px;
     list-style: none;
 }
 
-nav ul li #logo {
+#nav ul li #logo {
     font-size: 80px;
     color: #ECDFC4;
 }
 
-nav ul li {
+#nav ul li {
     margin: 5px 20px;
 }
 
-nav ul li:first-of-type {
+#nav ul li:first-of-type {
     margin-right: auto;
 }
 
-nav ul li a {
+#nav ul li a {
     font-size: 1.3rem;
     color: #ECDFC4;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+#nav ul li a:hover {
     color: #ECDFC4;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 /* Header */
