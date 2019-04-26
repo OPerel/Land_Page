@@ -1,13 +1,17 @@
-// Jquery - replace with react
-$(function() {
-   $('#scroll').click (function() {
-     $('html, body').animate({scrollTop: $('.services').offset().top }, 1400);
-     return false;
-   });
- });
-
-// React
 const nav = document.getElementById('nav');
+const mButton = document.getElementById('scroll')
+const services = document.getElementById('f')
+
+const scrollOnClick = (event) => {
+    services.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+};
+
+// TODO: react-scroll instead of the above.
+
+mButton.addEventListener('click', scrollOnClick)
 
 class Nav extends React.Component {
     // constructor () {
