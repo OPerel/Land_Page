@@ -7,22 +7,35 @@ $(function() {
  });
 
 // React
+const nav = document.getElementById('nav');
+
 class Nav extends React.Component {
-    constructor () {
-        super ();
-        this.state = {
-            page: 'header'
-        };
-    };
+    // constructor () {
+    //     super ();
+    //     this.state = {
+    //         section: event.target.id
+    //     };
+    // };
+
+    changeNavBg = (event) => {
+        if (window.scrollY > 100) {
+            nav.className = 'scrolled-nav';
+        } else {
+            nav.className = '';
+        }
+    }
+
+    componentDidMount () {
+        window.addEventListener('scroll', this.changeNavBg)
+    }
 
     render () {
-        const page = this.state.page;
         return (
             <ul>
                 <li><a href=""><i id="logo" className="fab fa-hooli"></i></a></li>
-                <li><a href="">Home</a></li>
                 <li><a href="">Fetures</a></li>
                 <li><a href="">Products</a></li>
+                <li><a href="">Subscribe</a></li>
             </ul>
         );
     };
@@ -34,5 +47,4 @@ class Nav extends React.Component {
 //     );
 // };
 
-const nav = document.getElementById('nav');
 ReactDOM.render(<Nav />, nav);

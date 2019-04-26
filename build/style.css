@@ -24,11 +24,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 #nav ul {
     display: flex;
     align-items: center;
+    margin: 0;
     padding: 0 40px;
     list-style: none;
 }
@@ -56,6 +58,11 @@ body {
     color: #ECDFC4;
     cursor: pointer;
     text-decoration: underline;
+}
+
+.scrolled-nav {
+    background-color: #052626;
+    transition: 0.7s;
 }
 
 /* Header */
