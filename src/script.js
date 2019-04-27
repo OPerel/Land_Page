@@ -55,7 +55,7 @@ class Nav extends React.Component {
                     <li><a onClick={(e) => this.scrollToSection('h')}>
                         <i id="logo" className="fab fa-hooli"></i>
                     </a></li>
-                    <li><img src='../images/menu.png' /></li>
+                    <li><i className="fas fa-bars"></i></li>
                 </ul>
             );
         };
