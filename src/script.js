@@ -21,9 +21,9 @@ class Nav extends React.Component {
 
     scrollToSection = (sec) => {
         let section = document.getElementById(sec);
-        section.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        window.scrollTo({
+            top: section.offsetTop - 80,
+            behavior: 'smooth'
         });
     };
 
