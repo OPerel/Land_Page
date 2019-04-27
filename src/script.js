@@ -1,17 +1,7 @@
 const nav = document.getElementById('nav');
 const mButton = document.getElementById('scroll')
-const services = document.getElementById('f')
 
-const scrollOnClick = (event) => {
-    services.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-    });
-};
-
-// TODO: react-scroll instead of the above.
-
-mButton.addEventListener('click', scrollOnClick)
+// TODO: react-scroll instead.
 
 class Nav extends React.Component {
     // constructor () {
@@ -21,7 +11,7 @@ class Nav extends React.Component {
     //     };
     // };
 
-    changeNavBg = (event) => {
+    changeNavBg = () => {
         if (window.scrollY > 100) {
             nav.className = 'scrolled-nav';
         } else {
@@ -38,7 +28,8 @@ class Nav extends React.Component {
     };
 
     componentDidMount () {
-        window.addEventListener('scroll', this.changeNavBg)
+        window.addEventListener('scroll', this.changeNavBg);
+        mButton.addEventListener('click', (e) => this.scrollToSection('f'));
     }
 
     render () {
@@ -54,11 +45,5 @@ class Nav extends React.Component {
         );
     };
 };
-
-// const Nav = () => {
-//     return (
-//
-//     );
-// };
 
 ReactDOM.render(<Nav />, nav);
