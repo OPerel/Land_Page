@@ -29,6 +29,14 @@ class Nav extends React.Component {
         }
     }
 
+    scrollToSection = (sec) => {
+        let section = document.getElementById(sec);
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    };
+
     componentDidMount () {
         window.addEventListener('scroll', this.changeNavBg)
     }
@@ -36,10 +44,12 @@ class Nav extends React.Component {
     render () {
         return (
             <ul>
-                <li><a href=""><i id="logo" className="fab fa-hooli"></i></a></li>
-                <li><a href="">Fetures</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Subscribe</a></li>
+                <li><a onClick={(e) => this.scrollToSection('h')}>
+                    <i id="logo" className="fab fa-hooli"></i>
+                </a></li>
+                <li><a onClick={(e) => this.scrollToSection('f')}>Fetures</a></li>
+                <li><a onClick={(e) => this.scrollToSection('p')}>Products</a></li>
+                <li><a onClick={(e) => this.scrollToSection('s')}>Subscribe</a></li>
             </ul>
         );
     };
