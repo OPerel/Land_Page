@@ -195,10 +195,14 @@ button, input {
 .text {
   display: flex;
   align-items: center;
+  text-align: center;
+}
+
+.text-inner h3 {
+    margin: 0 0 15px;
 }
 
 .text-inner p {
-  text-align: center;
   font-size: 1.2rem;
 }
 
