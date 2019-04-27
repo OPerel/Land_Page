@@ -37,7 +37,7 @@ body {
 }
 
 #nav ul li #logo {
-    font-size: 100px;
+    font-size: 6rem;
     color: #A47A80;
 }
 
@@ -64,6 +64,10 @@ body {
 .scrolled-nav {
     background-color: #052626;
     transition: 0.7s;
+}
+
+#nav ul li a i {
+    color: #ECDFC4;
 }
 
 /* Header */

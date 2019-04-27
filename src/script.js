@@ -1,13 +1,35 @@
 const nav = document.getElementById('nav');
 const mButton = document.getElementById('scroll')
 
-// TODO: react-scroll instead.
+const DeskTopNav = ({ onClickLink }) => {
+    return (
+        <ul>
+            <li><a onClick={(e) => onClickLink('h')}>
+                <i id="logo" className="fab fa-hooli"></i>
+            </a></li>
+            <li><a onClick={(e) => onClickLink('f')}>Fetures</a></li>
+            <li><a onClick={(e) => onClickLink('p')}>Products</a></li>
+            <li><a onClick={(e) => onClickLink('s')}>Contact</a></li>
+        </ul>
+    );
+};
+
+const MobileNav = () => {
+    return (
+        <ul>
+            <li><a onClick={(e) => onClickLink('h')}>
+                <i id="logo" className="fab fa-hooli"></i>
+            </a></li>
+            <li><a><i className="fas fa-bars"></i></a></li>
+        </ul>
+    );
+};
 
 class Nav extends React.Component {
     constructor () {
         super ();
         this.state = {
-            screenSize: 0
+            screenSize: window.innerWidth
         };
     };
 
@@ -40,23 +62,11 @@ class Nav extends React.Component {
     render () {
         if (this.state.screenSize > 992) {
             return (
-                <ul>
-                    <li><a onClick={(e) => this.scrollToSection('h')}>
-                        <i id="logo" className="fab fa-hooli"></i>
-                    </a></li>
-                    <li><a onClick={(e) => this.scrollToSection('f')}>Fetures</a></li>
-                    <li><a onClick={(e) => this.scrollToSection('p')}>Products</a></li>
-                    <li><a onClick={(e) => this.scrollToSection('s')}>Contact</a></li>
-                </ul>
+                <DeskTopNav onClickLink={this.scrollToSection} />
             );
         } else {
             return (
-                <ul>
-                    <li><a onClick={(e) => this.scrollToSection('h')}>
-                        <i id="logo" className="fab fa-hooli"></i>
-                    </a></li>
-                    <li><i className="fas fa-bars"></i></li>
-                </ul>
+                <MobileNav />
             );
         };
     };
