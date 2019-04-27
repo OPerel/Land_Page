@@ -40,7 +40,7 @@ class Nav extends React.Component {
                 </a></li>
                 <li><a onClick={(e) => this.scrollToSection('f')}>Fetures</a></li>
                 <li><a onClick={(e) => this.scrollToSection('p')}>Products</a></li>
-                <li><a onClick={(e) => this.scrollToSection('s')}>Subscribe</a></li>
+                <li><a onClick={(e) => this.scrollToSection('s')}>Contact</a></li>
             </ul>
         );
     };
