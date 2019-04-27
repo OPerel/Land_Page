@@ -14,16 +14,39 @@ const DeskTopNav = ({ onClickLink }) => {
     );
 };
 
-const MobileNav = () => {
+const MobileNav = ({ onClickLink }) => {
+    const barIcon = document.getElementById('bar');
+
+    const toggleDropDown = () => {
+        document.getElementById('dropdown').classList.toggle('drop');
+    }
+
     return (
         <ul>
             <li><a onClick={(e) => onClickLink('h')}>
                 <i id="logo" className="fab fa-hooli"></i>
             </a></li>
-            <li><a><i className="fas fa-bars"></i></a></li>
+            <li><a
+                id="bar"
+                onClick={toggleDropDown}
+                >
+                <i className="fas fa-bars"></i>
+            </a></li>
         </ul>
     );
+
+    bar.addEventListener('click', toggleDropDown)
 };
+
+const DropDown = ({ onClickLink }) => {
+    return (
+    <ul id="dropdown" className="drop">
+        <li><a onClick={(e) => onClickLink('f')}>Fetures</a></li>
+        <li><a onClick={(e) => onClickLink('p')}>Products</a></li>
+        <li><a onClick={(e) => onClickLink('s')}>Contact</a></li>
+    </ul>
+    )
+}
 
 class Nav extends React.Component {
     constructor () {
@@ -66,7 +89,10 @@ class Nav extends React.Component {
             );
         } else {
             return (
-                <MobileNav />
+                <div>
+                    <MobileNav onClickLink={this.scrollToSection} />
+                    <DropDown onClickLink={this.scrollToSection}/>
+                </div>
             );
         };
     };

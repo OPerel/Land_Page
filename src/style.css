@@ -66,8 +66,36 @@ body {
     transition: 0.7s;
 }
 
-#nav ul li a i {
+#nav #bar {
     color: #ECDFC4;
+}
+
+#nav #bar:hover {
+    text-decoration: none;
+}
+
+#nav .drop {
+    display: none;
+}
+
+#nav #dropdown {
+    flex-direction: column;
+    align-items: baseline;
+    max-width: min-content;
+    margin-left: auto;
+    margin-right: 5%;
+    padding: 10px;
+    border: solid #ECDFC4;
+}
+
+#nav #dropdown li {
+    margin: 5px 0;
+    text-align: left;
+}
+
+#nav #dropdown li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 /* Header */
