@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 const nav = document.getElementById('nav');
-// const dropNav = document.getElementById('drop-container');
 const mButton = document.getElementById('scroll')
 
 const DeskTopNav = () => {
@@ -55,43 +54,6 @@ const DeskTopNav = () => {
     );
 };
 
-// const MobileNav = ({ onClickLink }) => {
-//     const barIcon = document.getElementById('bar');
-//
-//     const toggleDropDown = () => {
-//         document.getElementById('dropdown').classList.toggle('drop');
-//     }
-//
-//     return (
-//         <div>
-//             <ul>
-//                 <li>
-//                     <a onClick={(e) => onClickLink('h')}>
-//                         <i id="logo" className="fab fa-hooli"></i>
-//                     </a>
-//                 </li>
-//                 <li>
-//                     <a id="bar" onClick={toggleDropDown}>
-//                         <i className="fas fa-bars"></i>
-//                     </a>
-//                 </li>
-//             </ul>
-//         </div>
-//     );
-//
-//     barIcon.addEventListener('click', toggleDropDown)
-// };
-//
-// const DropDown = ({ onClickLink }) => {
-//     return (
-//         <ul id="dropdown" className="drop">
-//             <li><a onClick={(e) => onClickLink('f')}>Fetures</a></li>
-//             <li><a onClick={(e) => onClickLink('p')}>Products</a></li>
-//             <li><a onClick={(e) => onClickLink('s')}>Contact</a></li>
-//         </ul>
-//     );
-// };
-
 class Nav extends React.Component {
     changeNavBg = () => {
         if (window.scrollY > 100) {
@@ -102,7 +64,6 @@ class Nav extends React.Component {
     }
 
     componentDidMount () {
-        // window.addEventListener('resize', this.onChangeViewPort)
         window.addEventListener('scroll', this.changeNavBg);
     }
 
@@ -110,17 +71,6 @@ class Nav extends React.Component {
         return (
             <DeskTopNav />
         );
-
-        // if (this.state.screenSize > 992) {
-        //
-        // } else {
-        //     return (
-        //         <div>
-        //             <MobileNav onClickLink={this.scrollToSection} />
-        //             <DropDown onClickLink={this.scrollToSection} />
-        //         </div>
-        //     );
-        // };
     };
 };
 
