@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom'
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 const nav = document.getElementById('nav');
 // const dropNav = document.getElementById('drop-container');
 const mButton = document.getElementById('scroll')
@@ -5,12 +9,48 @@ const mButton = document.getElementById('scroll')
 const DeskTopNav = () => {
     return (
         <ul>
-            <li><a>
-                <i id="logo" className="fab fa-hooli"></i>
-            </a></li>
-            <li><a>Fetures</a></li>
-            <li><a>Products</a></li>
-            <li><a>Contact</a></li>
+            <li>
+                <Link
+                to="h"
+                smooth={true}
+                offset={-70}
+                duration= {1000}
+                ><i id="logo" className="fab fa-hooli"></i>
+                </Link>
+            </li>
+            <li>
+                <Link
+                className="links"
+                activeClass="active"
+                to="f"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {1000}
+                >Fetures</Link>
+            </li>
+            <li>
+                <Link
+                className="links"
+                activeClass="active"
+                to="p"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {1000}
+                >Products</Link>
+            </li>
+            <li>
+                <Link
+                className="links"
+                activeClass="active"
+                to="s"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {1000}
+                >Contact</Link>
+            </li>
         </ul>
     );
 };
@@ -53,12 +93,12 @@ const DeskTopNav = () => {
 // };
 
 class Nav extends React.Component {
-    constructor () {
-        super ();
-        this.state = {
-            // screenSize: window.innerWidth
-        };
-    };
+    // constructor () {
+    //     super ();
+    //     this.state = {
+    //         // screenSize: window.innerWidth
+    //     };
+    // };
 
     // onChangeViewPort = (event) => {
     //     this.setState({ screenSize: event.target.innerWidth });
