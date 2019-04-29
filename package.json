@@ -15,5 +15,8 @@
     "bugs": {
         "url": "https://github.com/OPerel/Land_Page/issues"
     },
-    "homepage": "https://operel.github.io/Land_Page/"
+    "homepage": "https://operel.github.io/Land_Page/",
+    "dependencies": {
+        "react-scroll": "^1.7.11"
+    }
 }
