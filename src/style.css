@@ -24,6 +24,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    max-height: 154px;
     z-index: 1;
     transition: 0.7s;
 }
@@ -85,7 +86,6 @@ body {
     margin-left: auto;
     margin-right: 5%;
     padding: 10px;
-    border: solid #ECDFC4;
 }
 
 #nav #dropdown li {
@@ -93,10 +93,15 @@ body {
     text-align: left;
 }
 
-#nav #dropdown li a:hover {
+#nav #dropdown li a {
+    font-size: 1.5rem;
+    color: #A47A80;
+}
+
+/* #nav #dropdown li a:hover {
     text-decoration: underline;
     cursor: pointer;
-}
+} */
 
 /* Header */
 header {
