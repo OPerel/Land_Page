@@ -137,19 +137,21 @@ button, input {
   font-family: "Bitter", serif;
 }
 
-.btn-p {
-  display: block;
-  margin: 70px auto;
-  padding: 5px 40px;
-  border: solid 1px #ECDFC4;
-  border-radius: 5px;
-  font-size: 1.3rem;
-  color: #ECDFC4;
-  background-color: transparent;
-  transition: 0.3s;
+#scroll .btn-p {
+    display: block;
+    margin: 70px auto;
+    padding: 5px 0;
+    width: 25%;
+    text-align: center;
+    border: solid 1px #ECDFC4;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    color: #ECDFC4;
+    background-color: transparent;
+    transition: 0.3s;
 }
 
-.btn-p:hover {
+#scroll .btn-p:hover {
   color: #000000;
   background-color: #ECDFC4;
   border: solid 1px #ECDFC4;
