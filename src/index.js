@@ -93,17 +93,6 @@ const DeskTopNav = () => {
 // };
 
 class Nav extends React.Component {
-    // constructor () {
-    //     super ();
-    //     this.state = {
-    //         // screenSize: window.innerWidth
-    //     };
-    // };
-
-    // onChangeViewPort = (event) => {
-    //     this.setState({ screenSize: event.target.innerWidth });
-    // }
-
     changeNavBg = () => {
         if (window.scrollY > 100) {
             nav.className = 'scrolled-nav';
@@ -112,22 +101,9 @@ class Nav extends React.Component {
         }
     }
 
-    // scrollToSection = (sec) => {
-    //     const dropDown = document.getElementById('dropdown')
-    //     let section = document.getElementById(sec);
-    //     window.scrollTo({
-    //         top: section.offsetTop - 80,
-    //         behavior: 'smooth'
-    //     });
-    //     if (sec !== 'h') {
-    //         dropDown.classList.toggle('drop');
-    //     }
-    // };
-
     componentDidMount () {
         // window.addEventListener('resize', this.onChangeViewPort)
         window.addEventListener('scroll', this.changeNavBg);
-        // mButton.addEventListener('click', (e) => this.scrollToSection('f'));
     }
 
     render () {
