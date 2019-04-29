@@ -54,6 +54,22 @@ const DeskTopNav = () => {
     );
 };
 
+const Button = () => {
+    return (
+        // <button>
+            <Link
+            className="btn-p"
+            activeClass="active"
+            to="f"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {1000}
+            >Learn more</Link>
+        // </button>
+    )
+}
+
 class Nav extends React.Component {
     changeNavBg = () => {
         if (window.scrollY > 100) {
@@ -75,3 +91,4 @@ class Nav extends React.Component {
 };
 
 ReactDOM.render(<Nav />, nav);
+ReactDOM.render(<Button />, mButton);
