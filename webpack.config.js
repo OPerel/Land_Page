@@ -18,6 +18,6 @@ module.exports = {
         filename: 'main.js'
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './docs'
     }
 };
