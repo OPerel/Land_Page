@@ -202,6 +202,10 @@ button, input {
   background-color: #000E0E;
 }
 
+.quote .container {
+    padding: 0;
+}
+
 .quote p {
   color: #A47A80;
 }
