@@ -70,7 +70,14 @@ const MobileNav = ({ onClicking }) => {
         <div>
             <ul>
                 <li>
-                <i id="logo" className="fab fa-hooli"></i>
+                    <Link
+                    to="h"
+                    smooth={true}
+                    offset={-70}
+                    duration= {1000}
+                    ><i id="logo" className="fab fa-hooli"></i>
+                    </Link>
+
                 </li>
                 <li>
                     <a id="bar" onClick={onClicking}>
