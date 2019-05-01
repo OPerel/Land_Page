@@ -69,7 +69,11 @@ const MobileNav = () => {
     const barIcon = document.getElementById('bar');
 
     const toggleDropDown = () => {
-        document.getElementById('dropdown').classList.toggle('drop');
+        const dropNav = document.getElementById('dropdown');
+        dropNav.classList.toggle('drop');
+        if (window.scrollY > 100) {
+            dropNav.classList.add('scrolled-nav')
+        }
     }
 
     return (
@@ -92,9 +96,30 @@ const MobileNav = () => {
 const DropDown = () => {
     return (
         <ul id="dropdown" className="drop">
-            <li><a>Fetures</a></li>
-            <li><a>Products</a></li>
-            <li><a>Contact</a></li>
+            <li>
+                <Link
+                to='f'
+                smooth={true}
+                offset={-70}
+                duration= {1000}
+                >Fetures</Link>
+            </li>
+            <li>
+                <Link
+                to='p'
+                smooth={true}
+                offset={-70}
+                duration= {1000}
+                >Products</Link>
+            </li>
+            <li>
+                <Link
+                to='s'
+                smooth={true}
+                offset={-70}
+                duration= {1000}
+                >Contact</Link>
+            </li>
         </ul>
     );
 };
@@ -109,9 +134,9 @@ class Nav extends React.Component {
 
     changeNavBg = () => {
         if (window.scrollY > 100) {
-            nav.className = 'scrolled-nav';
+            nav.classList.add('scrolled-nav');
         } else {
-            nav.className = '';
+            nav.classList.remove('scrolled-nav');
         }
     }
 
@@ -125,7 +150,7 @@ class Nav extends React.Component {
     };
 
     render () {
-        console.log('render', window.outerWidth);
+        console.log('render', window.innerWidth);
         if (this.state.screenWidth > 992) {
             return (
                 <DeskTopNav />
@@ -143,7 +168,6 @@ class Nav extends React.Component {
 
 const mButton = document.getElementById("scroll");
 const nav = document.getElementById("nav");
-const dropNav = document.getElementById("drop-container");
 
 ReactDOM.render(<Nav />, nav);
 ReactDOM.render(<Button />, mButton);
