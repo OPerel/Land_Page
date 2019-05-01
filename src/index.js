@@ -53,17 +53,17 @@ const DeskTopNav = () => {
 
 const Button = () => {
     return (
-            <Link
-            className="btn-p"
-            activeClass="active"
-            to="f"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration= {1000}
-            >Learn more</Link>
-    )
-}
+        <Link
+        className="btn-p"
+        activeClass="active"
+        to="f"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration= {1000}
+        >Learn more</Link>
+    );
+};
 
 const MobileNav = () => {
     const barIcon = document.getElementById('bar');
@@ -122,7 +122,7 @@ class Nav extends React.Component {
     componentDidMount () {
         window.addEventListener('resize', this.onChangeViewPort)
         window.addEventListener('scroll', this.changeNavBg);
-    }
+    };
 
     render () {
         console.log('render', window.outerWidth);
@@ -146,5 +146,5 @@ const nav = document.getElementById("nav");
 const dropNav = document.getElementById("drop-container");
 
 
-ReactDOM.render(<Nav />, nav);
+// ReactDOM.render(<Nav />, nav);
 ReactDOM.render(<Button />, mButton);
