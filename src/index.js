@@ -103,7 +103,7 @@ class Nav extends React.Component {
     constructor () {
         super();
         this.state = {
-            screenWidth: window.innerWidth;
+            screenWidth: window.innerWidth
         };
     };
 
@@ -116,7 +116,7 @@ class Nav extends React.Component {
     }
 
     onChangeViewPort = () => {
-        this.setState({ screenWidth: window.innerWidth; });
+        this.setState({ screenWidth: window.innerWidth });
     };
 
     componentDidMount () {
@@ -145,6 +145,5 @@ const mButton = document.getElementById("scroll");
 const nav = document.getElementById("nav");
 const dropNav = document.getElementById("drop-container");
 
-
-// ReactDOM.render(<Nav />, nav);
+ReactDOM.render(<Nav />, nav);
 ReactDOM.render(<Button />, mButton);
