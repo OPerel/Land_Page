@@ -310,9 +310,11 @@ button, input {
   color: #dadada;
 }
 
-.logos h2 {
+.subscribe .logos h2 {
+    margin: 0;
     padding: 20px 0;
     text-align: center;
+    color: #dadada;
 }
 
 @keyframes scroll {
