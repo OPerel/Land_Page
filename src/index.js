@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-const nav = document.getElementById('nav');
-const dropNav = document.getElementById('drop-container');
-// const mButton = document.getElementById('scroll')
-
 const DeskTopNav = () => {
     return (
         <ul>
@@ -54,6 +50,20 @@ const DeskTopNav = () => {
         </ul>
     );
 };
+
+const Button = () => {
+    return (
+            <Link
+            className="btn-p"
+            activeClass="active"
+            to="f"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {1000}
+            >Learn more</Link>
+    )
+}
 
 const MobileNav = () => {
     const barIcon = document.getElementById('bar');
@@ -131,4 +141,10 @@ class Nav extends React.Component {
     };
 };
 
+const mButton = document.getElementById("scroll");
+const nav = document.getElementById("nav");
+const dropNav = document.getElementById("drop-container");
+
+
 ReactDOM.render(<Nav />, nav);
+ReactDOM.render(<Button />, mButton);
