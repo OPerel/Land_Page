@@ -87,6 +87,7 @@ body {
     margin-left: auto;
     margin-right: 5%;
     padding: 10px;
+    /* background-color: #052626; */
 }
 
 #nav #dropdown li {
@@ -96,7 +97,7 @@ body {
 
 #nav #dropdown li a {
     font-size: 1.5rem;
-    color: #A47A80;
+    color: #ECDFC4;
 }
 
 #nav .active {
@@ -164,7 +165,15 @@ button, input {
 
 /* Services Section */
 .services {
+<<<<<<< HEAD
+  background-color: #CECECE;
+=======
     background-color: #CECECE;
+}
+
+.services .container {
+    padding: 70px 0;
+>>>>>>> master
 }
 
 .services .container {
@@ -355,7 +364,11 @@ button, input {
 }
 
 .subscribe .container {
+<<<<<<< HEAD
+    padding: 50px 0;
+=======
       padding: 50px 0;
+>>>>>>> master
 }
 
 .subscribe h2 {
