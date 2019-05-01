@@ -2,12 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-<<<<<<< HEAD
-=======
-const nav = document.getElementById('nav');
-const mButton = document.getElementById('scroll')
-
->>>>>>> master
 const DeskTopNav = () => {
     return (
         <ul>
@@ -59,7 +53,6 @@ const DeskTopNav = () => {
 
 const Button = () => {
     return (
-<<<<<<< HEAD
         <Link
         className="btn-p"
         activeClass="active"
@@ -129,21 +122,6 @@ const DropDown = ({ onClicking }) => {
         </ul>
     );
 };
-=======
-        // <button>
-            <Link
-            className="btn-p"
-            activeClass="active"
-            to="f"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration= {1000}
-            >Learn more</Link>
-        // </button>
-    )
-}
->>>>>>> master
 
 class Nav extends React.Component {
     constructor () {
@@ -176,18 +154,11 @@ class Nav extends React.Component {
     }
 
     componentDidMount () {
-<<<<<<< HEAD
-        // const barIcon = document.getElementById('bar');
         window.addEventListener('resize', this.onChangeViewPort)
-=======
->>>>>>> master
         window.addEventListener('scroll', this.changeNavBg);
-        // barIcon.addEventListener('click', this.toggleDropDown)
     };
 
     render () {
-<<<<<<< HEAD
-        console.log('render', window.innerWidth);
         if (this.state.screenWidth > 992) {
             return (
                 <DeskTopNav />
@@ -200,11 +171,9 @@ class Nav extends React.Component {
                 </div>
             );
         };
-=======
         return (
             <DeskTopNav />
         );
->>>>>>> master
     };
 };
 
