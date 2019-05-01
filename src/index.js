@@ -65,17 +65,7 @@ const Button = () => {
     );
 };
 
-const MobileNav = () => {
-    const barIcon = document.getElementById('bar');
-
-    const toggleDropDown = () => {
-        const dropNav = document.getElementById('dropdown');
-        dropNav.classList.toggle('drop');
-        if (window.scrollY > 100) {
-            dropNav.classList.add('scrolled-nav')
-        }
-    }
-
+const MobileNav = ({ onClicking }) => {
     return (
         <div>
             <ul>
@@ -83,21 +73,21 @@ const MobileNav = () => {
                 <i id="logo" className="fab fa-hooli"></i>
                 </li>
                 <li>
-                    <a id="bar" onClick={toggleDropDown}>
+                    <a id="bar" onClick={onClicking}>
                         <i className="fas fa-bars"></i>
                     </a>
                 </li>
             </ul>
         </div>
     );
-    barIcon.addEventListener('click', toggleDropDown)
 };
 
-const DropDown = () => {
+const DropDown = ({ onClicking }) => {
     return (
         <ul id="dropdown" className="drop">
             <li>
                 <Link
+                onClick={onClicking}
                 to='f'
                 smooth={true}
                 offset={-70}
@@ -106,6 +96,7 @@ const DropDown = () => {
             </li>
             <li>
                 <Link
+                onClick={onClicking}
                 to='p'
                 smooth={true}
                 offset={-70}
@@ -114,6 +105,7 @@ const DropDown = () => {
             </li>
             <li>
                 <Link
+                onClick={onClicking}
                 to='s'
                 smooth={true}
                 offset={-70}
@@ -144,9 +136,21 @@ class Nav extends React.Component {
         this.setState({ screenWidth: window.innerWidth });
     };
 
+    toggleDropDown = () => {
+        const dropNav = document.getElementById('dropdown');
+        dropNav.classList.toggle('drop');
+        if (window.scrollY > 100) {
+            dropNav.classList.add('scrolled-nav')
+        } else {
+            dropNav.classList.remove('scrolled-nav')
+        }
+    }
+
     componentDidMount () {
+        // const barIcon = document.getElementById('bar');
         window.addEventListener('resize', this.onChangeViewPort)
         window.addEventListener('scroll', this.changeNavBg);
+        // barIcon.addEventListener('click', this.toggleDropDown)
     };
 
     render () {
@@ -158,8 +162,8 @@ class Nav extends React.Component {
         } else {
             return (
                 <div>
-                    <MobileNav />
-                    <DropDown />
+                    <MobileNav onClicking={this.toggleDropDown} />
+                    <DropDown onClicking={this.toggleDropDown} />
                 </div>
             );
         };
