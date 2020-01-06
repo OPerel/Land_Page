@@ -340,7 +340,7 @@ button, input {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7)); /* = -1750px */
   }
 }
 
@@ -349,7 +349,7 @@ button, input {
   display: flex;
   justify-content: space-around;
   justify-items: center;
-  width: calc(250px * 14);
+  width: calc(250px * 14); /* = 3500px */
 }
 
 .logos .slide-track .fab {
